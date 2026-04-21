@@ -186,7 +186,7 @@ i {
 }
 
 .left {
-  flex:1;
+  flex: 1;
 }
 .desc {
   color: #bbb;
@@ -194,7 +194,6 @@ i {
   margin-bottom: 10px;
   text-align: left;
 }
-
 
 .right {
   flex: 1;
@@ -213,7 +212,6 @@ i {
   padding-top: 30px;
 }
 
-
 .material-icons {
   font-size: 20px;
   vertical-align: middle;
@@ -224,13 +222,60 @@ i {
 .delivery .material-icons {
   font-size: 70px;
 }
-@media (max-width: 768px) {
+
+/* MOBILE RESPONSIVE  */
+
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+    margin: 30px;
+  }
+
+  .menu-item img {
+    width: 160px;
+    height: 110px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .small {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .find-content {
+    flex-direction: column;
+  }
+
+  .right iframe {
+    height: 220px;
+  }
+  .icons {
+    display: none;
+  }
+}
+
+/* SMALL MOBILE  */
+
+@media (max-width: 810px) {
   nav {
     position: absolute;
     right: -100%;
     top: 60px;
     background: black;
     width: 200px;
+    transition: 0.3s;
   }
 
   nav.active {
@@ -239,29 +284,84 @@ i {
 
   nav ul {
     flex-direction: column;
+    padding: 20px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .nav-bar {
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 120px;
   }
 
   .hamburger {
     display: block;
   }
 
-  .about {
-    flex-direction: column;
-  }
-
-  .menu {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery {
-    flex-direction: column;
-  }
-
   .hero-content {
     margin: 20px;
+    max-width: 90%;
+  }
+
+  .hero {
+    padding-top: 100px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 32px;
+  }
+
+  .line {
+    width: 200px;
+  }
+
+  .menu-desc {
+    margin: 20px;
+    font-size: 14px;
+  }
+
+  .small {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/*  EXTRA SMALL  */
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: auto;
   }
 }
